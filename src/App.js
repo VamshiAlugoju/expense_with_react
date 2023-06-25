@@ -25,10 +25,14 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-
+   
+  function handleFormsubmit(expense)
+  {
+       console.log(expense);
+  }
   return (
     <div>
-      <NewExpense />
+      <NewExpense onformSubmit = {handleFormsubmit} />
       <Expenses items={expenses} />
     </div>
   );
