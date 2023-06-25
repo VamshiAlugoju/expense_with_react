@@ -10,6 +10,7 @@ function handlesaveExpense(expense)
         ...expense,
         id:Math.random().toString()
     }
+    console.log(Expense);
     props.onformSubmit(Expense);
 }
 

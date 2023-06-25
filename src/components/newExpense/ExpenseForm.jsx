@@ -23,10 +23,12 @@ function ExpenseForm(props) {
   function handlesubmit(e)
   {
       e.preventDefault();
+   
+    //   console.log(datearr)
       const obj = {
         title,
         amount,
-        date
+        date:new Date(date)
       }
       setamount("");
       setdate("");
