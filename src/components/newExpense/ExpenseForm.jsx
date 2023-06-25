@@ -23,8 +23,6 @@ function ExpenseForm(props) {
   function handlesubmit(e)
   {
       e.preventDefault();
-   
-    //   console.log(datearr)
       const obj = {
         title,
         amount,
@@ -34,6 +32,7 @@ function ExpenseForm(props) {
       setdate("");
       settitle("");
      props.onsaveExpense(obj);
+     props.handleIsButton();
   }
 
 
@@ -54,6 +53,9 @@ function ExpenseForm(props) {
             </div>
           <div className="new-expense__actions">
             <button type='submit'> Submit </button>
+          </div>
+          <div className="new-expense__actions">
+            <button onClick={()=>{props.handleIsButton()}}> Cancel </button>
           </div>
         </div>
       </form>

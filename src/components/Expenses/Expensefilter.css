@@ -1,0 +1,14 @@
+
+.Filter_main_div{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.filter_select{
+    width: 7rem;
+    height: 2rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}

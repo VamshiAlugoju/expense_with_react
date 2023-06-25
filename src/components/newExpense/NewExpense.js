@@ -3,6 +3,8 @@ import ExpenseForm from './ExpenseForm'
 import "./NewExpense.css"
 
 function NewExpense(props) {
+
+  const [isbutton , setisbutton] = React.useState(true);
     
 function handlesaveExpense(expense)
 {
@@ -14,9 +16,16 @@ function handlesaveExpense(expense)
     props.onformSubmit(Expense);
 }
 
+ function handleIsButton()
+ {
+  setisbutton(!isbutton);
+ }
+
   return (
     <div className='new-expense'>
-        <ExpenseForm onsaveExpense = {handlesaveExpense} />
+       {isbutton ? <button onClick={handleIsButton}> Add Expense</button> :
+        <ExpenseForm handleIsButton={handleIsButton} onsaveExpense = {handlesaveExpense} />
+       }
     </div>
   )
 }
