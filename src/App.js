@@ -27,7 +27,8 @@ const Dummy_data = [
 ];
 
 const App = () => {
-  
+  let a = 930;
+  console.log(a)
   const [expenses,setexpenses] = React.useState(Dummy_data);
    
   function handleFormsubmit(expense)
